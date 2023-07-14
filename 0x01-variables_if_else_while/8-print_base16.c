@@ -14,10 +14,13 @@ int main(void)
 	int l;
 
 	for (l = '0'; l <= '9'; ++l)
-                putchar(l);
+	{
+		putchar(l);
+	}
 	for (w = 'a'; w <= 'f'; ++w)
+	{
 		putchar(w);
+	}
 	putchar('\n');
-
 	return (0);
 }
