@@ -6,14 +6,15 @@
  * in lowercase ten times, followed by a new line
  * Returns: Nothing
  */
+
 void print_alphabet_x10(void)
 {
-	int i;
 	char j;
+	int i;
 
-	for (i = 0; i <= 10; ++i)
+	for (i = 0; i < 10; i++)
 	{
-		for (j = 'a'; j <= 'z'; ++j)
+		for (j = 'a'; j <= 'z'; j++)
 			_putchar(j);
 		_putchar('\n');
 	}
