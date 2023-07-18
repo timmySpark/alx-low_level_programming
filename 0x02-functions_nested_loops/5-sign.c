@@ -5,7 +5,7 @@
  * @n: user input
  * Description: a function that checks if an input is greater, lesser than
  * or equals Zero
- * Returns: 1 if n is greater than zero
+ * Return: 1 if n is greater than zero
  *         -1 if n is less than and zero
  *          0 if n is equals zero
  */
