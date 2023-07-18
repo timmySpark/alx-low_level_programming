@@ -2,9 +2,10 @@
 
 /**
  * add - check main
- * @a , @b: two integer inputs
+ * @a: integer input a
+ * @b: integer input b
  * Description: a function that adds two integers
- * Returns: the result of the arithmetic operation
+ * Return: the result of the arithmetic operation
  */
 
 
