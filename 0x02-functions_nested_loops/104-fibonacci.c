@@ -4,9 +4,9 @@
  * main - a program that displays the first 98 fibonacci numbers
  * followed by a new line
  *
+ *
  * Return: Always 0
  */
-
 
 int main(void)
 {
@@ -49,6 +49,6 @@ int main(void)
 		fib2_half2 = half2;
 	}
 	printf("\n");
-
 	return (0);
 }
+
