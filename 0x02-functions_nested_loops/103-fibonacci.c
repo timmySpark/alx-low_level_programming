@@ -18,7 +18,7 @@ int main(void)
 	{
 		sum = num_1 + num_2;
 
-		if (sum % 2 == 0 && count < 4000000)
+		if (sum % 2 == 0 && sum < 4000000)
 			total += sum;
 		num_1 = num_2;
 		num_2 = sum;
