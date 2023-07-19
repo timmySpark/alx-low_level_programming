@@ -11,7 +11,8 @@
 
 int main(void)
 {
-	long num_1 = 0, num_2 = 1, sum, total;
+	long num_1 = 0, num_2 = 1, sum;
+	float total;
 	int count;
 
 	for (count = 1; count < 50; count++)
@@ -24,7 +25,7 @@ int main(void)
 		num_2 = sum;
 	}
 
-	printf("%lu\n", total);
+	printf("%.0f\n", total);
 
 	return (0);
 }
