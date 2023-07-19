@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	int num_1 = 0, num_2 = 1, sum, count;
+	long num_1 = 0, num_2 = 1, sum, count;
 
 	for (count = 0; count < 50 ; count++)
 	{
@@ -19,9 +19,9 @@ int main(void)
 		num_2 = sum;
 
 		if (count == 49)
-			printf("%d\n", sum);
+			printf("%lu\n", sum);
 		else
-			printf("%d, ", sum);
+			printf("%lu, ", sum);
 	}
 	return (0);
 }
