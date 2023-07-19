@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+/**
+ * main - create a fibonacci sequence of values that dont exceed 4000000
+ * and prints the sum of the even valued terms
+ * followed by a new line
+ *
+ * Returns: always 0
+ */
+
+
+int main(void)
+{
+	long num_1 = 0, num_2 = 2, sum, total;
+	int count;
+
+	for (count = 2; count < 50; count++)
+	{
+		sum = num_1 + num_2;
+
+		if (sum % 2 == 0 && count < 4000000)
+			total += sum;
+		num_1 = num_2;
+		num_2 = sum;
+	}
+
+	printf("%lu\n", total);
+
+	return (0);
+}
