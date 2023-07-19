@@ -10,7 +10,8 @@
 
 int main(void)
 {
-	unsigned int num_1 = 0, num_2 = 1, sum;
+	unsigned long num_1 = 0, num_2 = 1;
+	long sum;
 	int count;
 
 	for (count = 1; count < 98; count++)
@@ -20,8 +21,8 @@ int main(void)
 		num_2 = sum;
 
 		if (count == 98)
-			printf("%u\n", sum);
-		printf("%u, ", sum);
+			printf("%lu\n", sum);
+		printf("%lu, ", sum);
 	}
 
 	return (0);
