@@ -5,16 +5,16 @@
  * and prints the sum of the even valued terms
  * followed by a new line
  *
- * Returns: always 0
+ * Return: always 0
  */
 
 
 int main(void)
 {
-	long num_1 = 0, num_2 = 2, sum, total;
+	long num_1 = 0, num_2 = 1, sum, total;
 	int count;
 
-	for (count = 2; count < 50; count++)
+	for (count = 1; count < 50; count++)
 	{
 		sum = num_1 + num_2;
 
