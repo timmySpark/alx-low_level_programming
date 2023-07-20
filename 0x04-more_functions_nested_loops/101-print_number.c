@@ -24,8 +24,8 @@ void print_number(int n)
 
 /**
  * print_integer - check main
- * @i: Integer Input
- * Description: Function that prints i
+ * @m: Integer Input
+ * Description: Function that prints m
  * Return: Nothing
  */
 
