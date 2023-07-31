@@ -2,7 +2,7 @@
 
 /**
  * print_chessboard - check main
- * @a - board to be printed
+ * @a: board to be printed
  * Description - print a chessboard
  *
  * Return: 0
