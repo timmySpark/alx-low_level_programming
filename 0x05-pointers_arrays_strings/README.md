@@ -1,6 +1,6 @@
-## Pointers and Array Exercises
+# Pointers and Array Exercises
 
-# Areas Covered
+## Areas Covered
 
 - What are pointers and how to use them
 - What are arrays and how to use them
