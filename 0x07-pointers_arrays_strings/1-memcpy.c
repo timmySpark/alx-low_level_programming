@@ -7,7 +7,6 @@
  * @n: The number of bytes to copy from @src.
  * Description - a function that copies @n bytes
  * from memory area @src to memory area @dest
-
  * Return: A pointer to @dest
  */
 
