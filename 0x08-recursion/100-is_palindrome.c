@@ -22,7 +22,7 @@ int _strlen_recursion(char *s)
 
 
 /**
- * _strlen_recursion - returns the length of a string
+ * check_palindrome - check if a string is a palindrome
  * @str: string to be checked
  * @start: number to start from
  * @end: end number
@@ -44,7 +44,7 @@ int check_palindrome(char *str, int start, int end)
 
 
 /**
- * is_palindrome - check if a string is a plaindrome or not
+ * is_palindrome - check if a string is a palindrome or not
  * @s: string to be checked
  *
  * Return: if a string is a palindrome     - 1
