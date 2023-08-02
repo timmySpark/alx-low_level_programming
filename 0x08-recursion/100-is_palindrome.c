@@ -1,5 +1,36 @@
 #include "main.h"
 
+/**
+ * _strlen_recursion - returns the length of a string
+ * @s: string to be counted
+ *
+ * Return: the length of a string
+ */
+
+int _strlen_recursion(char *s)
+{
+	int len = 0;
+
+	if (*s)
+	{
+		len++;
+		len += _strlen_recursion(s + 1);
+	}
+
+	return (len);
+}
+
+
+/**
+ * _strlen_recursion - returns the length of a string
+ * @str: string to be checked
+ * @start: number to start from
+ * @end: end number
+ *
+ * Return: if start greater than end - 1 otherwise - 0
+ */
+
+
 int check_palindrome(char *str, int start, int end)
 {
 	if (start >= end)
