@@ -6,7 +6,9 @@
  * @argc: Number of command line arguments supplied to the program
  * @argv: An array containing the program command line arguments
  *
- * Return: 0
+ * Return: If one of the numbers contains symbols
+ *                               that are non-digits - 1
+ *                                         Otherwise - 0
  */
 
 int main(int argc, char *argv[])
@@ -20,7 +22,7 @@ int main(int argc, char *argv[])
 			if (argv[i][j] < '0'
 					|| argv[i][j] > '9')
 			{
-				printf("Error");
+				printf("Error\n");
 				return (1);
 			}
 		}
