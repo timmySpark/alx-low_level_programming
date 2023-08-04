@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - a program that prints it's name followed by a new line
+ * main - a program that multiplies two integers
  * @argc: Number of command line arguments supplied to the program
  * @argv: An array containing the program command line arguments
  *
