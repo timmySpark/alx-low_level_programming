@@ -3,7 +3,7 @@
 
 /**
  * array_range - a function that creates an array of integers
- * @min: minimum value 
+ * @min: minimum value
  * @max: maximum value
  *
  * Return: if min > max or the function fails - NULL
@@ -17,10 +17,9 @@ int *array_range(int min, int max)
 	if (min > max)
 		return (NULL);
 
-	for (i = 0; i <= max; i++)
-		size++;
+	size = max - min + 1;
 
-	range = malloc(sizeof(int) * (size + 1));
+	range = malloc(sizeof(int) * size);
 
 	if (range == NULL)
 		return (NULL);
@@ -28,6 +27,5 @@ int *array_range(int min, int max)
 	for (i = 0; i <= size; i++)
 		range[i] = min++;
 
-	range[size] = '\0';
 	return (range);
 }
