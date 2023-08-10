@@ -3,8 +3,8 @@
 
 /**
  * array_range - a function that creates an array of integers
- * @min: min value
- * @max: max value
+ * @min: minimum value 
+ * @max: maximum value
  *
  * Return: if min > max or the function fails - NULL
  *                  Otherwise - the pointer to the newly created array
@@ -25,7 +25,7 @@ int *array_range(int min, int max)
 	if (range == NULL)
 		return (NULL);
 
-	for (i = 0; i <= len; i++)
+	for (i = 0; i <= size; i++)
 		range[i] = min++;
 
 	return (range);
