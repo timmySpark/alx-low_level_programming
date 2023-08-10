@@ -20,7 +20,7 @@ int *array_range(int min, int max)
 	for (i = 0; i <= max; i++)
 		size++;
 
-	range = malloc(sizeof(int) * size + 1);
+	range = malloc(sizeof(int) * (size + 1));
 
 	if (range == NULL)
 		return (NULL);
