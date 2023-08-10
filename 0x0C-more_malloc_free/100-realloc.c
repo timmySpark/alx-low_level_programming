@@ -38,7 +38,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	prev_ptr = ptr;
 
-	alloc = malloc(sizeof(prev_ptr) * new_size);
+	alloc = malloc(sizeof(*prev_ptr) * new_size);
 
 	if (alloc == NULL)
 	{
