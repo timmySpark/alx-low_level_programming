@@ -48,7 +48,7 @@ void print_float(va_list args)
 	float digits;
 
 	digits = va_arg(args, double);
-	
+
 	printf("%f", digits);
 }
 
@@ -60,7 +60,7 @@ void print_float(va_list args)
 
 void print_string(va_list args)
 {
-        char *str;
+	char *str;
 
 	str = va_arg(args, char*);
 
