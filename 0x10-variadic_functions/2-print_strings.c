@@ -1,7 +1,6 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdio.h>
-#include <stddef.h>
 
 /**
  * print_strings - print strings, followed by an new line
@@ -26,7 +25,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 		if (str == NULL)
 			printf("(nil)");
-		printf("%s", str);
+		else
+			printf("%s", str);
 
 
 		if (i != (n - 1) && separator != NULL)
