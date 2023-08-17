@@ -7,6 +7,7 @@ void print_integer(va_list args);
 void print_float(va_list args);
 void print_string(va_list args);
 
+
 /**
  * print_char - print a character
  * @args: argument pointing to char to be printed
@@ -66,8 +67,8 @@ void print_string(va_list args)
 
 	if (str == NULL)
 		printf("(nil)");
-
-	printf("%s", str);
+	else
+		printf("%s", str);
 }
 
 
