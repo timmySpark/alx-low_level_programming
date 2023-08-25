@@ -5,7 +5,7 @@ void __attribute__((constructor)) tortoise_and_hare(void);
 
 
 /**
- * _tortoise_and_hare - print a message
+ * tortoise_and_hare - print a message
  */
 
 void tortoise_and_hare(void)
