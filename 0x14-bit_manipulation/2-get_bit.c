@@ -2,6 +2,7 @@
 
 /**
  * get_bit - Returns the value of a bit at a given index
+ * @n: The bit
  * @index: index of the bit to be got
  *
  * Return: if an error occured - 0
@@ -14,7 +15,7 @@ int get_bit(unsigned long int n, unsigned int index)
 
 	if (index >= (sizeof(n) * 8))
 		return (-1);
-	
+
 	bitt = 1 << index;
 	n &= bitt;
 	n >>= index;
