@@ -69,15 +69,14 @@ int main(int argc, char *argv[])
 
 	buffer = buffer_store_char(argv[2]);
 	from = open(argv[1], O_RDONLY);
-	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	f_read = read(from, buffer, BUFFER_SIZE);
+	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
-	while (f_read > 0)
-	{
+	do {
 		if (from == -1 || f_read == -1)
 		{
 			dprintf(STDERR_FILENO,
-			"Error: Can't read from file %s\n", argv[1]);
+				"Error: Can't read from file %s\n", argv[1]);
 
 			free(buffer);
 			exit(98);
@@ -96,12 +95,12 @@ int main(int argc, char *argv[])
 
 		f_read = read(from, buffer, BUFFER_SIZE);
 		to = open(argv[2], O_WRONLY | O_APPEND);
-	}
+
+	} while (f_read > 0);
 
 	free(buffer);
 	f_close(from);
 	f_close(to);
 
 	return (0);
-
 }
