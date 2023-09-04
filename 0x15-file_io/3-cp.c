@@ -99,7 +99,7 @@ int main(int argc, char *argv[])
 	}
 
 	free(buffer);
-	f_close(f_read);
+	f_close(from);
 	f_close(to);
 
 	return (0);
