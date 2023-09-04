@@ -68,8 +68,8 @@ int main(int argc, char *argv[])
 	}
 
 	buffer = buffer_store_char(argv[2]);
-	from = open(argv[1], O_RDWR);
-	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0600);
+	from = open(argv[1], O_RDONLY);
+	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	f_read = read(from, buffer, BUFFER_SIZE);
 
 	while (f_read > 0)
@@ -79,6 +79,7 @@ int main(int argc, char *argv[])
 			dprintf(STDERR_FILENO,
 			"Error: Can't read from file %s\n", argv[1]);
 
+			free(buffer);
 			exit(98);
 		}
 
@@ -89,6 +90,7 @@ int main(int argc, char *argv[])
 			dprintf(STDERR_FILENO,
 				"Error: Can't write to %s\n", argv[2]);
 
+			free(buffer);
 			exit(99);
 		}
 
