@@ -46,8 +46,8 @@ void f_close(int fd)
 
 /**
  * main - copies a content of a file to another file
- * @argc -Number of arguments passed to the program
- * @argv - array of pointers to the argument
+ * @argc: Number of arguments passed to the program
+ * @argv: array of pointers to the argument
  *
  * Description - if number of arguments is not the correct one
  *                                                     - exit with code 97
