@@ -1,22 +1,8 @@
 #include "main.h"
 #include <elf.h>
-#include <sys/types.h>
-#include <sys/stat.h>
 #include <fcntl.h>
-#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-
-void check_elf(unsigned char *e_ident);
-void _magic(unsigned char *e_ident);
-void _class(unsigned char *e_ident);
-void _data(unsigned char *e_ident);
-void _version(unsigned char *e_ident);
-void _abi(unsigned char *e_ident);
-void _os_abi(unsigned char *e_ident);
-void _type(unsigned int e_type, unsigned char *e_ident);
-void _entry(unsigned long int e_entry, unsigned char *e_ident);
-void close_elf(int elf);
 
 
 /**
@@ -26,7 +12,6 @@ void close_elf(int elf);
  * Description - If the file isn't an Elf file - exit with code 98
  *
  */
-
 
 void check_elf(unsigned char *e_ident)
 {
@@ -61,7 +46,6 @@ void close_elf(int elf)
 		exit(98);
 	}
 }
-
 
 /**
  * _magic - Prints the magic numbers of an ELF header
@@ -169,7 +153,6 @@ void _abi(unsigned char *e_ident)
 	       e_ident[EI_ABIVERSION]);
 }
 
-
 /**
  * _os_abi - Prints the OS/ABI of an ELF header
  * @e_ident: pointer to an array containing the ELF version
@@ -275,7 +258,6 @@ void _entry(unsigned long int e_entry, unsigned char *e_ident)
 		printf("%#lx\n", e_entry);
 }
 
-
 /**
  * main - Displays the information contained in the
  *        ELF header at the start of an ELF file
@@ -294,16 +276,13 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	int f_open, f_read;
 
 	f_open = open(argv[1], O_RDONLY);
-
 	if (f_open == -1)
 	{
 		dprintf(STDERR_FILENO,
 				"Error: Can't read file %s\n", argv[1]);
 		exit(98);
 	}
-
 	f_header = malloc(sizeof(Elf64_Ehdr));
-
 	if (f_header == NULL)
 	{
 		close_elf(f_open);
@@ -311,22 +290,17 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 				"Error: Can't read file %s\n", argv[1]);
 		exit(98);
 	}
-
 	f_read = read(f_open, f_header, sizeof(Elf64_Ehdr));
-
 	if (f_read == -1)
 	{
 		free(f_header);
 		close_elf(f_open);
-		dprintf(STDERR_FILENO,
-				"Error: `%s`: No such file\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
 		exit(98);
 	}
 
 	check_elf(f_header->e_ident);
-
 	printf("ELF Header:\n");
-
 	_magic(f_header->e_ident);
 	_class(f_header->e_ident);
 	_data(f_header->e_ident);
@@ -335,7 +309,6 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	_abi(f_header->e_ident);
 	_type(f_header->e_type, f_header->e_ident);
 	_entry(f_header->e_entry, f_header->e_ident);
-
 	free(f_header);
 	close_elf(f_open);
 	return (0);
