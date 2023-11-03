@@ -6,8 +6,7 @@
  *@size: size of array.
  *
  *
- *Return: NULL if something goes wrong
-	otherwise -  New table.
+ *Return: NULL if something goes wrong ,otherwise -  return new table.
  */
 
 hash_table_t *hash_table_create(unsigned long int size)
